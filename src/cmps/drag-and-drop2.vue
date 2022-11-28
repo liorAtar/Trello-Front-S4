@@ -1,17 +1,17 @@
 <template>
   <Container
-    class="h-full flex overflow-x-auto gap-8 p-8"
+    class=" flex overflow-x-auto gap-8 p-8"
     group-name="cols"
     tag="div"
     orientation="horizontal"
     @drop="onColumnDrop($event)"
   >
     <Draggable
-      class="bg-gray-200 dark:bg-gray-700 rounded-lg h-full w-96 flex-shrink-0 shadow-xl"
+      class="bg-gray-200 dark:bg-gray-700 rounded-lg w-96 flex-shrink-0 shadow-xl"
       v-for="column in scene.children"
       :key="column.id"
     >
-      <div class="h-full flex flex-col">
+      <div class=" flex flex-col">
         Yeah
         <div
           class="cursor-move rounded-t-lg p-4 space-x-4 bg-primary text-white flex space-x-2"
