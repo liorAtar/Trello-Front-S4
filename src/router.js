@@ -6,7 +6,6 @@ import carApp from './views/car-app.vue'
 import reviewApp from './views/review-app.vue'
 import loginSignup from './views/login-signup.vue'
 import userDetails from './views/user-details.vue'
-import dragAndDrop from './cmps/drag-and-drop.vue'
 import dragAndDrop2 from './cmps/drag-and-drop2.vue'
 
 const routes = [
@@ -39,11 +38,6 @@ const routes = [
     path: '/user/:id',
     name: 'user-details',
     component: userDetails
-  },
-  {
-    path: '/drag&drop',
-    name: 'drag-and-drop',
-    component: dragAndDrop
   },
   {
     path: '/drag&drop2',

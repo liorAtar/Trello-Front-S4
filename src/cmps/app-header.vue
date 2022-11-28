@@ -8,7 +8,6 @@
       <router-link to="/review">Reviews</router-link>
       <router-link to="/chat">Chat</router-link>
       <router-link to="/login">Login / Signup</router-link>
-      <router-link to="/drag&drop">drag and drop</router-link>
       <router-link to="/drag&drop2">drag and drop2</router-link>
     </nav>
     <section class="loggedin-user" v-if="loggedInUser">
