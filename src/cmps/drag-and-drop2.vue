@@ -12,7 +12,7 @@
       :key="column.id"
     >
       <div class="h-full flex flex-col">
-        <!-- header-->
+        Yeah
         <div
           class="cursor-move rounded-t-lg p-4 space-x-4 bg-primary text-white flex space-x-2"
         >
@@ -44,11 +44,14 @@
           @drop="(e) => onCardDrop(column.id, e)"
         >
           <!-- Items -->
-          <KanbanItem
+          <draggable
             v-for="item in column.children"
             :key="item.id"
             :item="item"
-          ></KanbanItem>
+            class="card"
+          >
+          <p>item</p>
+          </draggable>
         </Container>
       </div>
     </Draggable>
@@ -58,7 +61,6 @@
 <script>
 import { Container, Draggable } from "vue3-smooth-dnd";
 import { applyDrag, generateItems, generateWords } from "../utils/helpers";
-import KanbanItem from "../cmps/KanbanItem.vue";
 
 // mock
 const scene = {
@@ -82,7 +84,7 @@ const scene = {
   })),
 };
 export default {
-  components: { Container, Draggable, KanbanItem },
+  components: { Container, Draggable },
   data() {
     return {
       scene,
